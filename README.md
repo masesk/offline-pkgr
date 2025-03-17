@@ -25,8 +25,9 @@ pip install -r requirements.txt
 python offline_pkgr.py --pkg-manager=apt --distro=ubuntu:18.04 --packages="curl wget" --container-client=docker
 ```
 * This command will package wget and curl for Ubuntu 18.04 using the apt package manager and docker to spin a version of Ubuntu 18.04 in the background to do this. Note that current user should have access to docker.
+* --contaienr-client=`podman` needs to run as a service. Run ```podman system service --time=0``` on a different terminal.
 
-5. Copy `output.tar.gz` to the target machine along with either `create_installer.py` for Python3 supported targets or create a go executable using Go. (Details below)
+5. Copy `output.tar.gz` to the target machine along with either `offline_installer.py` for Python3 supported targets or create a go executable using Go. (Details below)
 
 ---
 
@@ -35,7 +36,7 @@ python offline_pkgr.py --pkg-manager=apt --distro=ubuntu:18.04 --packages="curl 
 ### Requirements
 1. Python3
 2. Pip3 
-3. `create_installer.py`
+3. `offline_installer.py`
 
 ### Execute
 ```
