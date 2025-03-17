@@ -1,4 +1,4 @@
-module offline-pkgr
+module offline-installer
 
 go 1.24.1
 

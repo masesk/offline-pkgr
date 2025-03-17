@@ -60,9 +60,9 @@ go mod tidy
 go build
 ```
 
-3. Copy `offline-pkgr` to target directory
+3. Copy `offline-installer` to target directory
 
 4. Install
 ```
-sudo ./offline-pkgr /path/to/output.tar.gz
+sudo ./offline-installer /path/to/output.tar.gz
 ```
