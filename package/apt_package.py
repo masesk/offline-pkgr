@@ -4,10 +4,7 @@ class AptPackage():
     def generate_download_command(self, packages: list[str], install_command: str = None, prepend_command: str = "", append_command: str = "") -> str:
         pkgs = " ".join(packages)
         if install_command is None:
-            install_command = f"""apt-get update &&
-            apt-get download $(apt-cache depends --recurse --no-recommends --no-suggests \
-            --no-conflicts --no-breaks --no-replaces --no-enhances \
-            {pkgs} | grep "^\w")"""
+            install_command = f"""apt-get update && apt-get download $(apt-cache depends --recurse --no-recommends --no-suggests --no-conflicts --no-breaks --no-replaces --no-enhances {pkgs} | grep "^\w")"""
         command = f""" {prepend_command} {install_command} {append_command}"""
         return command
     
