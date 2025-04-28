@@ -1,2 +1,2 @@
 docker==7.1.0
-podman==5.4.0.1
+podman==5.2.0
